@@ -9,7 +9,7 @@ export class CategoryCreate extends D1CreateEndpoint<HandleArgs> {
             MaterialTypeId: true,
             name: true,
             description: true,
-            IsActive: true,
+            isActive: true,
 
         }),
     };

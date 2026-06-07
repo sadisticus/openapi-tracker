@@ -9,7 +9,7 @@ export class CategoryUpdate extends D1UpdateEndpoint<HandleArgs> {
 			MaterialTypeId: true,
 			name: true,
 			description: true,
-            IsActive: true,
+            isActive: true,
 		}),
 	};
 }
