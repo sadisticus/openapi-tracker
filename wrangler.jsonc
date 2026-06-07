@@ -1,0 +1,16 @@
+{
+	"compatibility_date": "2025-10-08",
+	"main": "src/index.ts",
+	"name": "openapi-tracker",
+	"upload_source_maps": true,
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "container-tracker",
+			"database_id": "84a6e928-bed8-4488-98e2-08ac2dcea902"
+		}
+	]
+}
