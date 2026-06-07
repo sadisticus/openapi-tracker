@@ -2,7 +2,7 @@
 import { HandleArgs } from "../../types";
 import { MaterialTypeModel } from "./base";
 
-export class MaterialTypeList extends D1ListEnpoint<HandleArgs> {
+export class MaterialTypeList extends D1ListEndpoint<HandleArgs> {
     _meta = {
         model: MaterialTypeModel,
     };
