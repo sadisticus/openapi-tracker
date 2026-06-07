@@ -1,12 +1,12 @@
 ﻿import { Hono } from 'hono';
-import { fromHomo } from 'chanfana';
+import { fromHono } from 'chanfana';
 import { MaterialTypeList } from "./materialTypeList";
 import { MaterialTypeRead } from "./materialTypeRead"; 
 import { MaterialTypeUpdate } from "./materialTypeUpdate";
 import { MaterialTypeCreate } from "./materialTypeCreate";
 import { MaterialTypeDelete } from "./materialTypeDelete";
 
-export const materialTypeRouter = fromHomo(new Hono());
+export const materialTypeRouter = fromHono(new Hono());
 
 materialTypeRouter.get("/", MaterialTypeList);
 materialTypeRouter.get("/:id", MaterialTypeRead);

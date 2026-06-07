@@ -1,4 +1,4 @@
-﻿import { D1ListEnpoint } from "chanfana";
+﻿import { D1ListEndpoint } from "chanfana";
 import { HandleArgs } from "../../types";
 import { MaterialTypeModel } from "./base";
 

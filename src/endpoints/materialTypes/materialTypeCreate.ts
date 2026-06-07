@@ -1,4 +1,4 @@
-﻿import { D1CreateEndoint } from "chanfana";
+﻿import { D1CreateEndpoint } from "chanfana";
 import { HandleArgs } from "../../types";
 import { MaterialTypeModel } from "./base";
 
