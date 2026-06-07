@@ -1,4 +1,11 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,node,git
+# Append the ignore rule (handles CRLF)
+Add-Content -Path .gitignore -Value "`r`n# Ignore Visual Studio workspace folder`r`n.vs/"
+
+# Stop tracking any already-tracked .vs files, add the change and commit
+git rm -r --cached .vs
+git add .gitignore
+git commit -m "Ignore Visual Studio workspace (.vs)"
+git push# Created by https://www.toptal.com/developers/gitignore/api/macos,node,git
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,node,git
 
 ### Git ###
@@ -197,3 +204,6 @@ dist
 !.env.example
 .dev.vars*
 !.dev.vars.example
+
+# Ignore Visual Studio workspace folder
+.vs/
