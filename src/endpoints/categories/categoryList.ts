@@ -9,7 +9,7 @@ export class CategoryList extends D1ListEndpoint<HandleArgs> {
 
     searchFields = ["name", "description"];
     defaultOrderby = "name DESC";
-    filterFields = ["MaterialTypeId", "isActive"];
+    filterFields = ["MaterialTypeId"];
 
 }
 
