@@ -2,7 +2,7 @@
 import { HandleArgs } from "../../types";
 import { MaterialTypeModel } from "./base";
 
-export class MaterialTypeCreate extends D1CreateEndoint<HandleArgs> {
+export class MaterialTypeCreate extends D1CreateEndpoint<HandleArgs> {
     _meta = {
         model: MaterialTypeModel,
         fields: MaterialTypeModel.schema.pick({
