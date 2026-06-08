@@ -1,9 +1,12 @@
 import { ApiException, fromHono } from "chanfana";
 import { Hono } from "hono";
+
 import { tasksRouter } from "./endpoints/tasks/router";
 import { materialTypeRouter } from "./endpoints/materialTypes/router"; 
 import { categoryRouter } from "./endpoints/categories/router"; 
 import { supplierRouter } from "./endpoints/suppliers/router"; 
+import { materialRouter } from "./endpoints/materials/router";
+
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
 
@@ -54,6 +57,9 @@ openapi.route("/categories", categoryRouter);
 
 // Register Suppliers Sub router
 openapi.route("/suppliers", supplierRouter);
+
+// Register Materials Sub router
+openapi.route("/materials", materialRouter);
 
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);
