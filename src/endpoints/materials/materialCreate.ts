@@ -8,7 +8,7 @@ export class MaterialCreate extends D1CreateEndpoint<HandleArgs> {
         fields: MaterialModel.schema.pick({
             // this is purposely missing the id, because users shouldn't be able to define it
             REF: true,
-            categoryId: true,
+            materialCategoryId: true,
             name: true,
             description: true,
             balance: true,

@@ -10,6 +10,6 @@ export class MaterialList extends D1ListEndpoint<HandleArgs> {
     searchFieldNames = ['REF', 'name'];
     defaultOrderBy = 'name ASC';
 
-    filterFields = ["categoryId"];
+    filterFields = ["materialCategoryId"];
 }
 

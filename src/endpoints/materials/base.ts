@@ -2,7 +2,7 @@
 
 export const Material = z.object({
     id: z.number().int(),
-    categoryId: z.number().int(),
+    materialCategoryId: z.number().int(),
     REF: z.string(),
     name: z.string(),
     description: z.string(),
