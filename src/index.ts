@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import { tasksRouter } from "./endpoints/tasks/router";
 import { materialTypeRouter } from "./endpoints/materialTypes/router"; 
 import { categoryRouter } from "./endpoints/categories/router"; 
-import { supplierRouter } from "./endpoints/suppliers/router"; }
+import { supplierRouter } from "./endpoints/suppliers/router"; 
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
 
