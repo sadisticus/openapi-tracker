@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { tasksRouter } from "./endpoints/tasks/router";
 import { materialTypeRouter } from "./endpoints/materialTypes/router"; 
 import { categoryRouter } from "./endpoints/categories/router"; 
+import { SuppliersRouter } from "./endpoints/suppliers/router"; }
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
 
@@ -50,6 +51,9 @@ openapi.route("/material-types", materialTypeRouter);
 
 // Register Category Sub router
 openapi.route("/categories", categoryRouter);
+
+// Register Suppliers Sub router
+openapi.route("/suppliers", SuppliersRouter);
 
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);
