@@ -5,13 +5,6 @@ import { PurchaseOrderModel } from './base';
 export class PurchaseOrderList extends D1ListEndpoint<HandleArgs> {
     _meta = {
         model: PurchaseOrderModel,
-        fields: PurchaseOrderModel.schema.pick({
-            // omit id
-            SupplierId: true,
-            PONumber: true,
-            PurchaseOrderDate: true,
-            details: true,
-        }),
     };
 
     searchFields = ["PONumber"];

@@ -11,7 +11,7 @@ export class PurchaseOrderCreate extends D1CreateEndpoint<HandleArgs> {
             // omit id
             SupplierId: true,
             PONumber: true,
-            PurchaseOrderDate: true,
+            PuchaseOrderDate: true,
             details: true,
         }),
     };
@@ -19,7 +19,7 @@ export class PurchaseOrderCreate extends D1CreateEndpoint<HandleArgs> {
     async beforeCreate(data: PurchaseOrderInput, c: any) {
         return {
             ...data,
-            PurchaseOrderDate: data.PurchaseOrderDate,
+            PurchaseOrderDate: data.PuchaseOrderDate,
         };
     }
 }
