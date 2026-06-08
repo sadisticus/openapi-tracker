@@ -7,6 +7,7 @@ import { categoryRouter } from "./endpoints/categories/router";
 import { supplierRouter } from "./endpoints/suppliers/router"; 
 import { materialRouter } from "./endpoints/materials/router";
 import { supplierMaterialRouter } from "./endpoints/supplierMaterials/router";
+import { packTypeRouter } from "./endpoints/packTypes/router";
 
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
@@ -40,9 +41,9 @@ const openapi = fromHono(app, {
 	docs_url: "/",
 	schema: {
 		info: {
-			title: "My Awesome API",
+			title: "conTrack API",
 			version: "2.0.0",
-			description: "This is the documentation for my awesome API.",
+			description: "This is the documentation for conTrak API.",
 		},
 	},
 });
@@ -64,6 +65,9 @@ openapi.route("/materials", materialRouter);
 
 //Register SupplierMaterial Sub router
 openapi.route("/supplierMaterials", supplierMaterialRouter);
+
+// Register PackType Sub router
+openapi.route("/packTypes", packTypeRouter);
 
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);
