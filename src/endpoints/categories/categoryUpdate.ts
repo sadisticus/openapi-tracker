@@ -1,15 +1,14 @@
 ﻿import { D1UpdateEndpoint } from "chanfana";
 import { HandleArgs } from "../../types";
-import { CategoryModel } from "./base";
+import {  CategoryModel } from "./base";
 
 export class CategoryUpdate extends D1UpdateEndpoint<HandleArgs> {
-	_meta = {
-		model: CategoryModel,
-		fields: CategoryModel.schema.pick({
-			MaterialTypeId: true,
-			name: true,
-			description: true,
+    _meta = {
+        model: CategoryModel,
+        fields: CategoryModel.schema.pick({
+            name: true,
+            description: true,
             isActive: true,
-		}),
-	};
+        }),
+    };
 }
