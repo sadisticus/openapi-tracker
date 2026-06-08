@@ -8,6 +8,7 @@ import { supplierRouter } from "./endpoints/suppliers/router";
 import { materialRouter } from "./endpoints/materials/router";
 import { supplierMaterialRouter } from "./endpoints/supplierMaterials/router";
 import { packTypeRouter } from "./endpoints/packTypes/router";
+import { purchaseOrderRouter } from './endpoints/purchaseOrders/router';
 
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
@@ -69,8 +70,11 @@ openapi.route("/supplierMaterials", supplierMaterialRouter);
 // Register PackType Sub router
 openapi.route("/packTypes", packTypeRouter);
 
+// Register PurchaseOrder Sub router
+openapi.route("/purchaseOrders", purchaseOrderRouter);
+
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);
 
-// Export the Hono app
+//Register Export the Hono app
 export default app;
