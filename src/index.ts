@@ -6,6 +6,7 @@ import { materialTypeRouter } from "./endpoints/materialTypes/router";
 import { categoryRouter } from "./endpoints/categories/router"; 
 import { supplierRouter } from "./endpoints/suppliers/router"; 
 import { materialRouter } from "./endpoints/materials/router";
+import { supplierMaterialRouter } from "./endpoints/supplierMaterials/router";
 
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
@@ -60,6 +61,9 @@ openapi.route("/suppliers", supplierRouter);
 
 // Register Materials Sub router
 openapi.route("/materials", materialRouter);
+
+//Register SupplierMaterial Sub router
+openapi.route("/supplierMaterials", supplierMaterialRouter);
 
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);

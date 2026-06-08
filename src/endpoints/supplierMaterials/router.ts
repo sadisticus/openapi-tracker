@@ -6,10 +6,10 @@ import { SupplierMaterialList } from './supplierMaterialList';
 import { SupplierMaterialRead } from './supplierMaterialRead';
 import { SupplierMaterialUpdate } from './supplierMaterialUpdate';
 
-export const materialSupplierRouter = fromHono(new Hono());
+export const supplierMaterialRouter = fromHono(new Hono());
 
-materialSupplierRouter.get("/", SupplierMaterialList);
-materialSupplierRouter.get("/:id", SupplierMaterialRead);
-materialSupplierRouter.post("/", SupplierMaterialCreate);
-materialSupplierRouter.put("/:id", SupplierMaterialUpdate);
-materialSupplierRouter.delete("/:id", SupplierMaterialDelete);
+supplierMaterialRouter.get("/", SupplierMaterialList);
+supplierMaterialRouter.get("/:id", SupplierMaterialRead);
+supplierMaterialRouter.post("/", SupplierMaterialCreate);
+supplierMaterialRouter.put("/:id", SupplierMaterialUpdate);
+supplierMaterialRouter.delete("/:id", SupplierMaterialDelete);
