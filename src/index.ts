@@ -10,6 +10,7 @@ import { supplierMaterialRouter } from "./endpoints/supplierMaterials/router";
 import { packTypeRouter } from "./endpoints/packTypes/router";
 import { purchaseOrderRouter } from './endpoints/purchaseOrders/router';
 import { voyageRouter } from './endpoints/voyages/router';
+import { manifestRouter } from './endpoints/manifests/router';
 
 import { ContentfulStatusCode } from "hono/utils/http-status";
 import { DummyEndpoint } from "./endpoints/dummyEndpoint";
@@ -76,6 +77,9 @@ openapi.route("/purchaseOrders", purchaseOrderRouter);
 
 //Register Voyage Sub router
 openapi.route("/voyages", voyageRouter);
+
+//Register Manifest Sub router
+openapi.route("/manifests", manifestRouter);
 
 // Register other endpoints
 openapi.post("/dummy/:slug", DummyEndpoint);
