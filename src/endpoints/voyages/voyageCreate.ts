@@ -15,6 +15,7 @@ export class VoyageCreate extends D1CreateEndpoint<HandleArgs> {
             vessel: true,
             FreeDays: true,
             RequestedQuantity: true,
+            price: true,
             RequestedDate: true,
             VesselETA: true,
             ArrivedDate: true,

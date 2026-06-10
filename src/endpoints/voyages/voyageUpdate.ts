@@ -14,6 +14,7 @@ export class VoyageUpdate extends D1UpdateEndpoint<HandleArgs> {
             FreeDays: true,
             RequestedQuantity: true,
             RequestedDate: true,
+            price: true,
             VesselETA: true,
             ArrivedDate: true,
             completed: true,

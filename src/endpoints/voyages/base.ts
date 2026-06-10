@@ -8,6 +8,7 @@ export const Voyage = z.object({
     vessel: z.string(),
     FreeDays: z.number().int(),
     RequestedQuantity: z.number(),
+    price: z.number(),
     RequestedDate: z.string().openapi({ format: "date-time" }),
     VesselETA: z.string().nullable().openapi({ format: "date-time" }),
     ArrivedDate: z.string().nullable().openapi({ format: "date-time" }),
